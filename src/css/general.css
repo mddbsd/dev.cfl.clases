@@ -1,0 +1,10 @@
+body{
+    background-color: bisque;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header{
+    background-color: cyan;
+    padding: 1rem;
+    text-align: center;
+}
