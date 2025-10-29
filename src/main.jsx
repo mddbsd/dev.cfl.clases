@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client'
 //Import Componentes
 import Inicio from './componentes/inicio'
 import Header from './componentes/header'
+import Pie from './componentes/pie'
 //Imports CSS
 import './css/general.css'
 
@@ -12,5 +13,6 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Header />
     <Inicio />
+    <Pie />
   </StrictMode>,
 )
