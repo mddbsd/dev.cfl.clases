@@ -38,9 +38,6 @@ export default function ClaseForm() {
                         <td>Muestra una caja de seleccion, para elegir entre cero o multiples selecciones</td>
                     </tr>
                     <tr>
-                        <input name="asd"  type="radio"/><input name="asd" type="radio"/><input name="asd"  type="radio"/>
-                    </tr>
-                    <tr>
                         <td>type="submit"</td>
                         <td>Muestra un boton para enviar la informacion del formulario</td>
                     </tr>
@@ -50,6 +47,32 @@ export default function ClaseForm() {
                     </tr>
                 </tbody>
             </table>
+            <h2 className="m-4 text-3xl font-bold">El elemento &lt;label&gt;</h2>
+            <p>El elemento label define una etiqueta para muchos elementos de formulario. Es muy util para los usuarios con lector de pantalla ya que este sera leido cuendo el usuario enfoca el elemento de entrada.</p>
+            <p>Este elemento tambien ayuda a usuarios que tienen dificultad clickeando en regiones muy pequeñas (tales como botones radio o checkboxes) porque cuando el usuario clickea el texto dentro del &lt;label&gt;, activa dichos botones</p>
+            <p>Tambien podemos utilizar un atributo llamado for para emparejar un elemento de entrada con la etiqueta, para hacerlo, el id de la entrada debe coincidir con el for del label</p>
+            <div>
+                <h3 className="m-4 text-2xl font-bold">Ejemplo radio</h3>
+                <div className="radios">
+                    <form>
+                        <input type="radio" id="html" name="leng_fav" value="HTML" />
+                        <label for="html">HTML</label><br/>
+                        <input type="radio" id="css" name="leng_fav" value="CSS" />
+                        <label for="css">CSS</label><br/>
+                        <input type="radio" id="javascript" name="leng_fav" value="JavaScript" />
+                        <label for="javascript">JavaScript</label>
+                    </form>
+                    <h3 className="m-4 text-2xl font-bold">Ejemplo checkbox</h3>
+                    <form>
+                        <input type="checkbox" id="vehiculo1" name="vehiculo1" value="Moto" />
+                        <label for="vehiculo1">Tengo una moto</label><br/>
+                        <input type="checkbox" id="vehiculo2" name="vehiculo2" value="Auto" />
+                        <label for="vehiculo2">Tengo un auto</label><br/>
+                        <input type="checkbox" id="vehiculo3" name="vehiculo3" value="Bici" />
+                        <label for="vehiculo3">Tengo una bici</label><br/>
+                    </form>
+                </div>
+            </div>
         </>
     )
 }
