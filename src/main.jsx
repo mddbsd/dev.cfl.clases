@@ -8,6 +8,8 @@ import { RouterProvider } from 'react-router';;
 import Inicio from './componentes/inicio';
 import Header from './componentes/header';
 import Pie from './componentes/pie';
+import ClaseForm from './componentes/claseform';
+
 //Imports CSS
 import './css/general.css';
 
@@ -17,8 +19,8 @@ const router = createBrowserRouter([
     Component: Inicio
   },
   {
-    path: "/formulario",
-    element: <h1>Futura pagina de formulario</h1>  
+    path: "/clase-formulario",
+    Component: ClaseForm
   }
 ]);
 
