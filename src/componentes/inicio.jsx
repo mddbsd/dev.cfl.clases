@@ -15,7 +15,8 @@ export default function Inicio(){
     //document.getElementById('tazaColor').innerHTML = taza.color;
     return(
         <>
-            
+            <h1>Pagina de inicio</h1>
+            <a href="./clase-formulario">Link a clase formulario</a>
         </>
     )
 }

@@ -10,6 +10,7 @@ import Header from './componentes/header';
 import Pie from './componentes/pie';
 import ClaseForm from './componentes/claseform';
 import Pruebas from './componentes/pruebas';
+import Hooks from './componentes/hooks';
 
 //Imports CSS
 import './css/general.css';
@@ -26,8 +27,11 @@ const router = createBrowserRouter([
   {
     path: "/pruebas",
     Component: Pruebas
+  },
+  {
+    path: "/hooks",
+    Component: Hooks
   }
-
 ]);
 
 createRoot(document.getElementById('root')).render(
