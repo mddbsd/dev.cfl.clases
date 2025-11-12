@@ -25,6 +25,13 @@ export default function FuncionUseEffect(){
         //Y cada vez que el valor de propiedades o estado cambie
     },[propiedades, estados]);
 
+    //Ejmplo Practico
+    const [cuenta2, setCuenta2] = useState(0);
+    const [calculo, setCalculo] = useState(0);
+    
+    useEffect(() => {
+        setCalculo(() => cuenta2 * 2);
+    },[cuenta2]);
 
     return(
         <div>
@@ -40,6 +47,10 @@ export default function FuncionUseEffect(){
             <p>Esto no es lo queríamos, hay varias maneras de controlar cuando corre este side effect.</p>
             <p>Deberiamos siempre incluir el segundo parametro que acepta un array. Opcionalmente podriamos pasar dependencias al useEffect de esta manera.</p>
             <h3>Ver ejemplos en el codigo fuente</h3>
+            <h3>Ejemplo practico</h3>
+            <p>Cuenta: {cuenta2}</p>
+            <button onClick={() => setCuenta2((c) => c + 1)}>+</button>
+            <p>Calculo: {calculo}</p>
         </div>
     )
 }
