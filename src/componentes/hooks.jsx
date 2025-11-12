@@ -7,7 +7,7 @@ import FuncionUseEffect from "./useeffect";
 export default function Hooks(){
     const [nombre, setNombre] = useState("Maxi");
     return(
-        <div className="contenido [&>p]:m-3 [&>h1,h2]:m-4 [&>h1,h2]:font-bold" >
+        <div className="contenido" >
             <h1>React Hooks</h1>
             <p>Los ganchos (Hooks) permiten a los componentes funcionales acceder al estado y otras propiedades sin la utilizacion de clases.<br/>Proveen una API mas directa a conceptos de react como props, states, context, entre otros</p>
             <p>Son en definitiva funciones que permiten "enganchar a" propieddes de React desde componentes funcionales"</p>

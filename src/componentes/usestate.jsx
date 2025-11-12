@@ -22,7 +22,7 @@ export default function FuncionUseState(){
     }
  
     return(
-        <div className="contenido [&>p]:m-3 [&>h1,h2]:m-4 [&>h1,h2]:font-bold">
+        <div className="contenido">
             <h2>Hook useState</h2>
             <p>Este hook se utiliza para mantener un seguimiento del estado de la aplicacion-<br/>Los estados generalmente se refieren a datos o propiedades de la aplicacion que necesitan ser monitoreados</p>
             <p>El primer paso es importarlo desde react; import &#123; useState &#125; from 'react';</p>
