@@ -2,6 +2,7 @@ import { useState } from "react";
 
 //componentes
 import FuncionUseState from "./usestate";
+import FuncionUseEffect from "./useeffect";
 
 export default function Hooks(){
     const [nombre, setNombre] = useState("Maxi");
@@ -25,7 +26,7 @@ export default function Hooks(){
                 </ul>
             </p>
             <FuncionUseState />
-
+            <FuncionUseEffect />
         </div>
     )
 }
