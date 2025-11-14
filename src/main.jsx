@@ -27,16 +27,26 @@ function Contenido(){
     }
 
     const [numero1, setNumero1] = useState(0);
-    const gestiona1 = event =>{
-        setNumero1(event.target.value);
-    }
     const [numero2, setNumero2] = useState(0);
-    const gestiona2 = event =>{
-        setNumero2(event.target.value);
-    }
+    const [resultado, setResultado] = useState(0); //En esta variable de estado guardamos el resultado
 
-    function funcionSumar(n1, n2){
-        return n1 + n2;
+    const gestionaEnvio = event =>{
+        console.log('corre gestionaEnvio: ')
+        event.preventDefault(); //Previene que lapagina se actualice
+
+        //accedemos a los valores de entrada
+        console.log("numero 1: ", numero1);
+        console.log("numero 2: ", numero2);
+
+        //Los valores que vienen de las variables de estado a travez del useState 
+        //son cadenas de caracteres. la funcion parseInt los transforma
+        //a numeros enteros
+        setResultado(parseInt(numero1) + parseInt(numero2));
+        
+
+        //Limpiamos los valores de entrada
+        setNumero1(0);
+        setNumero2(0);
     }
     return(
         <div>
@@ -82,20 +92,29 @@ function Contenido(){
             <p>Utilizamos el hook useState para monitorear el valor del campo de entrada, establecemos la propiedad onChange del campo para que cada vez que su valor cambie se invoque a la funcion gestionaCambio.<br/>Podemos acceder al valor del elemento de entrada como event.target.calue en la funcion gestionaCambio (event es solo el nombre del parametro que recibe el evento de cambio, puede llamarse de cualquier manera), la propiedad target en el evento se refiere al elemento de entrada.<br/>Se puede utilizar la variable de estado campoNombre para acceder al valor del campo de entrada en cualquier lugar fuera de la funcion gestionaCambio</p>
             <h3>Ejercicios</h3>
             <p>Crear 2 campos de entrada:</p>
-            <input className='border border-amber-500' 
-                type="text" 
-                id="numero1" 
-                name="numero1"
-                onChange={gestiona1}
-                value={numero1}/>
-            <input className='border border-amber-500' 
-                type="text" 
-                id="numero2" 
-                name="numero2"
-                onChange={gestiona2}
-                value={numero2}/>
-            <input className="bg-red m-4" type="button" value="sumar" onClick={funcionSumar(numero1, numero2)}/>
-            <h4>Resultado : {funcionSumar(numero1, numero2)}</h4>
+            {/*
+            Para hacer funcionar el boton, meti todos los elementos
+            en un formulario. la propiedad onSubmit ejecuta la funcion
+            al momento de tocar el boton, a diferencia del type="button" que 
+            necesita el onClick para ejecutar la funcion
+            */}
+            <form onSubmit={gestionaEnvio}>
+                <input className='border border-amber-500' 
+                    type="text" 
+                    id="numero1" 
+                    name="numero1"
+                    onChange={event => setNumero1(event.target.value)}
+                    />
+                <input className='border border-amber-500' 
+                    type="text" 
+                    id="numero2" 
+                    name="numero2"
+                    onChange={event => setNumero2(event.target.value)}
+                    />
+                <button className="bg-red m-4" type="submit">Sumar</button>
+                <h4>Resultado : {resultado}</h4>
+            </form>
+            
         </div>
     )
 }
