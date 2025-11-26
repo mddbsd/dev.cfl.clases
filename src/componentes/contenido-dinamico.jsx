@@ -1,6 +1,25 @@
 import listaPersonas from '../json/personas.json'
+import listaPelis from '../json/peliculas.json'
 
 export default function ContenidoDinamico(){
+
+    function Ficha(){
+        return(
+            <div id="contenedorelementos" className='flex flex-wrap gap-4 bg-blue-100 [&_p]:m-0'>
+                {
+                    listaPelis.map((peli, indice) => (
+                    <div id="elemento" key={indice} className='w-2/5 border border-black rounded-sm bg-gradient-to-b from-stone-300 to-sky-200'>
+                        <h4>{peli.titulo}</h4>
+                        <img className='w-full' src={peli.imagen} alt="imagen1"></img>
+                        <p>Duracion: {peli.duracion}</p>
+                        <p>Genero: {peli.genero}</p>
+                        <p>Director: {peli.director}</p>
+                    </div>
+                    ))
+                }
+            </div>
+        )
+    }
 
     return(
         <div>
@@ -34,6 +53,12 @@ export default function ContenidoDinamico(){
                     </tbody>
                 </table>
             </div>
+            <h3>Contenedores dinamicos</h3>
+            <p>No solamente podemos gererar tablas, el contenido dinámico puede ser cualquier cosa, desde un tag p hasta un tag div con multoples elementos internos. Es importante primero definir una estructura estable ya que el contenido se ira cargando de manera automatica.</p>
+            <div>
+                <Ficha />
+            </div>
+            
         </div>
     )
 }

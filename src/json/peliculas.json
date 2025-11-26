@@ -1,0 +1,51 @@
+[
+    {
+        "titulo":"Alien",
+        "genero":"sci fi",
+        "duracion":"2",
+        "director":"ridley scott",
+        "imagen":"https://placehold.co/600x400/000000/FFF"
+    },
+    {
+        "titulo":"Robocop",
+        "genero":"accion",
+        "duracion":"1.5",
+        "director":"elrobo",
+        "imagen":"https://placehold.co/600x400/red/green"
+    },
+    {
+        "titulo":"Rambo",
+        "genero":"accion",
+        "duracion":"1.4",
+        "director":"el miso q aliens",
+        "imagen":"https://placehold.co/600x400/green/yellow"
+    },
+    {
+        "titulo":"Predator",
+        "genero":"accion",
+        "duracion":"1.5",
+        "director":"nomeacuerdo",
+        "imagen":"https://placehold.co/600x400/blue/red"
+    },
+    {
+        "titulo":"El señor de los novillos",
+        "genero":"fantasia",
+        "duracion":"1.5",
+        "director":"nomeacuerdo",
+        "imagen":"https://placehold.co/600x400/green/black"
+    },
+    {
+        "titulo":"Harry postre",
+        "genero":"fantasia",
+        "duracion":"1.5",
+        "director":"nomeacuerdo",
+        "imagen":"https://placehold.co/600x400/orange/white"
+    },
+    {
+        "titulo":"Interestellar",
+        "genero":"sci-fi",
+        "duracion":"2",
+        "director":"nomeacuerdo",
+        "imagen":"https://placehold.co/600x400/blue/red"
+    }
+]
