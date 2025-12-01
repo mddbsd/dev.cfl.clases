@@ -7,6 +7,7 @@ import './css/general.css'
 
 import HeaderNav from './componentes/headernav';
 import ContenidoDinamico from './componentes/contenido-dinamico';
+import Snippets from './componentes/snippets';
 
 function ComponentePrincipal(){
     return(
@@ -22,6 +23,10 @@ const rutasObjetos = createBrowserRouter([
     {
         path: "/contenido-dinamico",
         Component: ContenidoDinamico
+    },
+    {
+        path: "/snippets",
+        Component: Snippets
     }
 ])
 
